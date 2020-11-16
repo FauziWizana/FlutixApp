@@ -26,7 +26,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        context.bloc<PageBloc>().add(GoToSplashPage());
+        context.read<PageBloc>().add(GoToSplashPage());
 
         return;
       },
@@ -47,7 +47,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           alignment: Alignment.centerLeft,
                           child: GestureDetector(
                             onTap: () {
-                              context.bloc<PageBloc>().add(GoToSplashPage());
+                              context.read<PageBloc>().add(GoToSplashPage());
                             },
                             child: Icon(Icons.arrow_back, color: Colors.black),
                           ),

@@ -50,7 +50,7 @@ class _MainPageState extends State<MainPage> {
                 elevation: 0,
                 backgroundColor: accentColor2,
                 onPressed: () {
-                  context.bloc<PageBloc>().add(GoToTopUpPage(GoToMainPage()));
+                  context.read<PageBloc>().add(GoToTopUpPage(GoToMainPage()));
                 },
                 child: SizedBox(
                   height: 26,

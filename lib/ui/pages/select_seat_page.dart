@@ -46,7 +46,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                             padding: EdgeInsets.all(1),
                             child: GestureDetector(
                               onTap: () {
-                                context.bloc<PageBloc>().add(
+                                context.read<PageBloc>().add(
                                     GoToSelectSchedulePage(
                                         widget.ticket.movieDetail));
                               },
@@ -119,7 +119,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                                     : Color(0xffbebebe)),
                             onPressed: selectedSeates.length > 0
                                 ? () {
-                                    context.bloc<PageBloc>().add(
+                                    context.read<PageBloc>().add(
                                         GoToCheckoutPage(widget.ticket
                                             .copyWith(seats: selectedSeates)));
                                   }

@@ -102,7 +102,7 @@ class _PreferencePageState extends State<PreferencePage> {
                           widget.registrationData.selectedLang =
                               selectedLanguage;
 
-                          context.bloc<PageBloc>().add(
+                          context.read<PageBloc>().add(
                               GoToAccountConfirmationPage(
                                   widget.registrationData));
                         }

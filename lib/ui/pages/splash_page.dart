@@ -54,7 +54,7 @@ class SplashPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    context.bloc<PageBloc>().add(GoToLoginPage());
+                    context.read<PageBloc>().add(GoToLoginPage());
                   },
                   child: Text(
                     'Sign In',

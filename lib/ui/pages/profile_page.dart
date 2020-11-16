@@ -10,7 +10,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return WillPopScope(
         onWillPop: () async {
-          context.bloc<PageBloc>().add(GoToMainPage());
+          context.read<PageBloc>().add(GoToMainPage());
 
           return;
         },
@@ -33,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: EdgeInsets.all(1),
                     child: GestureDetector(
                       onTap: () {
-                        context.bloc<PageBloc>().add(GoToMainPage());
+                        context.read<PageBloc>().add(GoToMainPage());
                       },
                       child: Icon(
                         Icons.arrow_back,
@@ -114,7 +114,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     BlocBuilder<UserBloc, UserState>(
                       builder: (_, userState) => GestureDetector(
                         onTap: () {
-                          context.bloc<PageBloc>().add(GoToEditProfilePage(
+                          context.read<PageBloc>().add(GoToEditProfilePage(
                               (userState as UserLoaded).user));
                         },
                         child: Row(
@@ -301,7 +301,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     style: whiteTextFont.copyWith(fontSize: 16),
                   ),
                   onPressed: () {
-                    context.bloc<UserBloc>().add(SignOut());
+                    context.read<UserBloc>().add(SignOut());
                     AuthServices.signOut();
                   },
                 ),

@@ -8,7 +8,7 @@ class WalletPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
         onWillPop: () async {
-          context.bloc<PageBloc>().add(pageEvent);
+          context.read<PageBloc>().add(pageEvent);
 
           return;
         },
@@ -34,7 +34,7 @@ class WalletPage extends StatelessWidget {
                           padding: EdgeInsets.only(top: 20),
                           child: GestureDetector(
                             onTap: () {
-                              context.bloc<PageBloc>().add(pageEvent);
+                              context.read<PageBloc>().add(pageEvent);
                             },
                             child: Icon(
                               Icons.arrow_back,

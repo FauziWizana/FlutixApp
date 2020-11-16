@@ -20,7 +20,7 @@ class _SignInPageState extends State<SignInPage> {
 
     return WillPopScope(
       onWillPop: () {
-        context.bloc<PageBloc>().add(GoToSplashPage());
+        context.read<PageBloc>().add(GoToSplashPage());
 
         return;
       },

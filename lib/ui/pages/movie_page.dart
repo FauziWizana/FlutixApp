@@ -41,7 +41,7 @@ class MoviePage extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                context.bloc<PageBloc>().add(GoToProfilePage());
+                                context.read<PageBloc>().add(GoToProfilePage());
                               },
                               child: Container(
                                 width: 50,

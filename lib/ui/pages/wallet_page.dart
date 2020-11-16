@@ -281,7 +281,7 @@ class WalletPage extends StatelessWidget {
                         style: whiteTextFont.copyWith(fontSize: 16)),
                     onPressed: () {
                       context
-                          .bloc<PageBloc>()
+                          .read<PageBloc>()
                           .add(GoToTopUpPage(GoToWalletPage(pageEvent)));
                     }),
               ),

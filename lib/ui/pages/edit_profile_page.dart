@@ -261,7 +261,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                                   profileImage: profilePath));
 
                                           context
-                                              .bloc<PageBloc>()
+                                              .read<PageBloc>()
                                               .add(GoToProfilePage());
                                         }
                                       : null),

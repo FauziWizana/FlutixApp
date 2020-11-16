@@ -44,7 +44,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                             child: GestureDetector(
                               onTap: () {
                                 context
-                                    .bloc<PageBloc>()
+                                    .read<PageBloc>()
                                     .add(GoToSelectSeatPage(widget.ticket));
                               },
                               child: Icon(

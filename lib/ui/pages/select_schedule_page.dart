@@ -52,7 +52,7 @@ class _SelectSchedulePageState extends State<SelectSchedulePage> {
                       child: GestureDetector(
                         onTap: () {
                           context
-                              .bloc<PageBloc>()
+                              .read<PageBloc>()
                               .add(GoToMovieDetailPage(widget.movieDetail));
                         },
                         child: Icon(

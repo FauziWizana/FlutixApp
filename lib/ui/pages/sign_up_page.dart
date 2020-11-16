@@ -213,7 +213,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             passwordController.text;
 
                         context
-                            .bloc<PageBloc>()
+                            .read<PageBloc>()
                             .add(GoToPreferencePage(widget.registrationData));
                       }
                     },

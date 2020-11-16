@@ -61,11 +61,11 @@ class SuccessPage extends StatelessWidget {
                             onPressed: () {
                               if (ticket == null) {
                                 context
-                                    .bloc<PageBloc>()
+                                    .read<PageBloc>()
                                     .add(GoToWalletPage(GoToMainPage()));
                               } else {
                                 context
-                                    .bloc<PageBloc>()
+                                    .read<PageBloc>()
                                     .add(GoToMainPage(bottomNavBarIndex: 1));
                               }
                             },

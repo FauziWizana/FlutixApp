@@ -81,7 +81,7 @@ class MovieDetailPage extends StatelessWidget {
                                           child: GestureDetector(
                                             onTap: () {
                                               context
-                                                  .bloc<PageBloc>()
+                                                  .read<PageBloc>()
                                                   .add(GoToMainPage());
                                             },
                                             child: Icon(

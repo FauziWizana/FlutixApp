@@ -16,7 +16,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
     return WillPopScope(
         onWillPop: () async {
           context
-              .bloc<PageBloc>()
+              .read<PageBloc>()
               .add(GoToSelectSchedulePage(widget.ticket.movieDetail));
 
           return;
